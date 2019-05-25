@@ -17,7 +17,18 @@ Testing: [1, 0, 1, 1] ==> 11
 However, the arrays can have varying lengths, not just limited to 4.
 */
 
+/*
+Solutions:
+*/
+
 const binaryArrayToNumber = arr => {
-  return parseInt(arr.join(''),2);
+ var sum=0;
+ for(let i = arr.length-1 ; i>=0; i--){
+    if(arr[i] == 1){
+      sum += 2 ** (arr.length-1-i);
+    }  
+ }
+ return sum;
 };
+
 
